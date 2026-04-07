@@ -364,7 +364,7 @@ int main()
         cout << "\033[2J\033[1;1H";
         banner();
         cout<<endl;
-        cout<<"C hanging target IP...\n";
+        cout<<" Changing target IP...\n";
         cout<<"\n Target IP Loaded: "<<ip<<endl;
         goto in_ch;
         
@@ -374,6 +374,8 @@ int main()
         cout << "\033[2J\033[1;1H";
         banner();
         cout<<"\n Target IP Loaded: "<<ip<<endl<<endl;
+        IP_Handling(ip, ip1, ip2, ip3, ip4, cidr);
+        Subnet_Musk(cidr, ones, zeros, interesting_octet_position, sub_musk, subnets, block_size,ni,b,fhi,lhi,nni,sm,sr,uhr,ip1,ip2,ip3,ip4);
         Find_Subnet_Details(ni, b, fhi, lhi, nni, sm,sr,uhr, ones, zeros, cidr, block_size, subnets);
         
 
