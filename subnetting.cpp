@@ -222,25 +222,25 @@ void Subnet_Musk(int &cidr, int &ones, int &zeros, int &interesting_octet_positi
 void Find_Subnet_Details(string ni, string b, string fhi, string lhi,string nni, string sm, string sr, string uhr, int ones, int zeros, int cidr, int block_size, int subnets){
     int oness = (cidr/8) * 8 + ones;
     // Printing Subnet Details
-    cout<< "Subnet Details... \n";
+    cout<< " Subnet Details... \n";
 
-    cout<< "Network ID        : " << ni << endl;
-    cout<< "Broadcast         : " << b<<endl;
-    cout<< "First Host IP     : " << fhi<<endl;
-    cout<< "Last Host IP      : " << lhi<<endl;
-    cout<< "Next Network ID   : " << nni<<endl;
-    cout<< "Subnet Mask       : " << sm<<endl;
+    cout<< " Network ID        : " << ni << endl;
+    cout<< " Broadcast         : " << b<<endl;
+    cout<< " First Host IP     : " << fhi<<endl;
+    cout<< " Last Host IP      : " << lhi<<endl;
+    cout<< " Next Network ID   : " << nni<<endl;
+    cout<< " Subnet Mask       : " << sm<<endl;
 
-    cout<< "Subnet Range      : " << sr<<endl;
-    cout<< "Usable Host Range : " << uhr<<endl;
+    cout<< " Subnet Range      : " << sr<<endl;
+    cout<< " Usable Host Range : " << uhr<<endl;
     
-    cout << "Netorks Bits      : " << oness << endl;
-    cout << "Host Bits         : " << zeros << endl;
-    cout << "CIDR              : " << cidr << endl;
-    cout << "Block Size        : " << block_size << endl;
-    cout << "Subnets           : " << subnets << endl;
-    cout << "IP Addresses      : " << pow(2, zeros) << endl;
-    cout << "Number of Hosts   : " << pow(2, zeros) - 2 << endl;
+    cout << " Netorks Bits      : " << oness << endl;
+    cout << " Host Bits         : " << zeros << endl;
+    cout << " CIDR              : " << cidr << endl;
+    cout << " Block Size        : " << block_size << endl;
+    cout << " Subnets           : " << subnets << endl;
+    cout << " IP Addresses      : " << pow(2, zeros) << endl;
+    cout << " Number of Hosts   : " << pow(2, zeros) - 2 << endl;
 
 }
 
@@ -289,7 +289,7 @@ int  FLSM(int &cidr, int &ones, int &zeros, int &interesting_octet_position, int
 int main()
 {
     banner();
-    cout<<"\nDon't stuck at Subnetting,Just Lemme know the\n";
+    cout<<"\n Don't stuck at Subnetting,Just Lemme know the\n";
     
     in_ch:
 
@@ -297,7 +297,7 @@ int main()
     string ip,ni,b,fhi,lhi,nni,sm,sr,uhr,IP,IPF;
     int ip1, ip2, ip3, ip4, cidr, i1, i2, i3, i4,dot_count = 0,slash_count = 0,dot_slash = 1, slash_flag = 1;
     
-    cout<<"Target IP: ";// GO TO junction
+    cout<<" Target IP: ";// GO TO junction
     cin >> ip;
     IP = ip;
 
@@ -338,7 +338,7 @@ int main()
     cout << "\033[2J\033[1;1H";
     banner();// Show banner
     // Show Load
-    cout<<"\nTarget IP Loaded: "<<ip<<endl;
+    cout<<"\n Target IP Loaded: "<<ip<<endl;
     
     cin.get();
     cin.get();
@@ -347,25 +347,25 @@ int main()
 
     cout << "\033[2J\033[1;1H";
     banner();
-    cout<<"\nTarget IP Loaded: "<<ip<<endl<<endl;
+    cout<<"\n Target IP Loaded: "<<ip<<endl<<endl;
 
     
     cmd_line:
     // Command Line
     cout << "\033[2J\033[1;1H";
     banner();
-    cout<<"\nTarget IP Loaded: "<<ip<<endl<<endl;
-    cout<<"What You Wanna DO?\n0. Change Target IP\n1. Find Subnet Details\n2. FLSM\n3. VLSM\n4. Exit\n";
+    cout<<"\n Target IP Loaded: "<<ip<<endl<<endl;
+    cout<<" What You Wanna DO?\n 0. Change Target IP\n 1. Find Subnet Details\n 2. FLSM\n 3. VLSM\n 4. Exit\n";
     string cmd;
-    cout<<"\n$ ";
+    cout<<"\n $ ";
     cin>>cmd;
 
     if(cmd == "0") {
         cout << "\033[2J\033[1;1H";
         banner();
         cout<<endl;
-        cout<<"Changing target IP...\n";
-        cout<<"\nTarget IP Loaded: "<<ip<<endl;
+        cout<<"C hanging target IP...\n";
+        cout<<"\n Target IP Loaded: "<<ip<<endl;
         goto in_ch;
         
         
@@ -373,7 +373,7 @@ int main()
     else if(cmd == "1"){
         cout << "\033[2J\033[1;1H";
         banner();
-        cout<<"\nTarget IP Loaded: "<<ip<<endl<<endl;
+        cout<<"\n Target IP Loaded: "<<ip<<endl<<endl;
         Find_Subnet_Details(ni, b, fhi, lhi, nni, sm,sr,uhr, ones, zeros, cidr, block_size, subnets);
         
 
@@ -382,13 +382,13 @@ int main()
        
         cout << "\033[2J\033[1;1H";
         banner();
-        cout<<"\nTarget IP Loaded: "<<ip<<endl;
+        cout<<"\n Target IP Loaded: "<<ip<<endl;
 
         Num_of_Subnets:
 
         // Inputing number of subnets
         int nf,cidr_shifter,iF = 1;
-        cout<<"Number of Subnets: ";
+        cout<<" Number of Subnets: ";
         cin>> nf;
         int nnf = nf;
 
@@ -401,7 +401,7 @@ int main()
         cidr = cidr + cidr_shifter;
         
         
-        cout<<"CIDR of Subnets: "<< cidr<<endl<<endl;
+        cout<<" CIDR of Subnets: "<< cidr<<endl<<endl;
         IPF = ni + '/' + to_string(cidr);
     
         IP_Handling(IPF, ip1, ip2, ip3, ip4, cidr);
@@ -424,14 +424,14 @@ int main()
     else if(cmd == "3"){
         cout << "\033[2J\033[1;1H";
         banner();
-        cout<<"\nTarget IP Loaded: "<<ip<<endl;
-        cout<<"Under Development!!\n";} // Call VLSM()
+        cout<<"\n Target IP Loaded: "<<ip<<endl;
+        cout<<" Under Development!!\n";} // Call VLSM()
     else if(cmd == "4" or cmd == "Exit" or cmd == "exit") return 0;
     else{
         cout << "\033[2J\033[1;1H";
         banner();
-        cout<<"\n$ "<<cmd<<endl;
-        cout<<"Worng Command!!\n";
+        cout<<"\n $ "<<cmd<<endl;
+        cout<<" Worng Command!!\n";
         
         
     }
