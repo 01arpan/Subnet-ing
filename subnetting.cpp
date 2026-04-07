@@ -281,6 +281,7 @@ int  FLSM(int &cidr, int &ones, int &zeros, int &interesting_octet_position, int
     IP_Handling(IPF, ip1, ip2, ip3, ip4, cidr);
     Subnet_Musk(cidr, ones, zeros, interesting_octet_position, sub_musk, subnets, block_size,ni,b,fhi,lhi,nni,sm,sr,uhr,ip1,ip2,ip3,ip4);
     FLSM(cidr, ones, zeros, interesting_octet_position, sub_musk, subnets, block_size,ni,b,fhi,lhi,nni,sm,sr,uhr,ip1,ip2,ip3,ip4,IPF,nf,iF,nnf);
+    return 0;
             
 }
 
