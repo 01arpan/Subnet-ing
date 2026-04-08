@@ -329,6 +329,7 @@ int  VLSM(int &cidr, int &ones, int &zeros, int &interesting_octet_position, int
 
 int main()
 {
+    cout << "\033[2J\033[1;1H";
     banner();
     cout<<"\n Don't stuck at Subnetting,Just Lemme know the\n";
     
