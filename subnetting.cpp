@@ -256,19 +256,22 @@ void banner(){
 }
 
 
+
+
 int  FLSM(int &cidr, int &ones, int &zeros, int &interesting_octet_position, int &sub_musk, int &subnets, int &block_size,string &ni,string &b,string  &fhi,string &lhi,string &nni,string &sm, string &sr, string &uhr,int &ip1,int &ip2,int &ip3, int &ip4, string &IPF, int nf, int &iF,int nnf){
+    string i4p = to_string(ip4);
     int IP4 = ip4;int j = 0;
 
     cout<<"  "<<iF<<"  "<<"          "<<ni <<"          ";
-    while (IP4  != 0){
-        IP4 = IP4/10;
-        j++;    
-    }
-    int i = 5 -j;
-    while(i--) cout<<" ";
     
+   
+    int i = 15 - ni.length();
+    while (i--) cout<<" ";
     
-    cout<<uhr<<"             "<<b<<endl; 
+    cout<<uhr<<"   ";
+    i = 30 - ni.length();
+    while (i--) cout<<" ";
+    cout<<b<<endl; 
     
     iF++;
     if(iF == nnf+1) return 0; // Exiting after printing number of sunnet times
@@ -284,6 +287,44 @@ int  FLSM(int &cidr, int &ones, int &zeros, int &interesting_octet_position, int
     return 0;
             
 }
+
+
+
+int  VLSM(int &cidr, int &ones, int &zeros, int &interesting_octet_position, int &sub_musk, int &subnets, int &block_size,string &ni,string &b,string  &fhi,string &lhi,string &nni,string &sm, string &sr, string &uhr,int &ip1,int &ip2,int &ip3, int &ip4, string &IPF, int nf, int &iF,int nnf){
+    int IP4 = ip4;int j = 0;
+
+    cout<<"  "<<iF<<"  "<<"          "<<ni<<'/'<<cidr <<"          ";
+    int i = 15 - ni.length();
+    while (i--) cout<<" ";
+
+    cout<<uhr<<"   ";
+    i = 30 - ni.length();
+    while (i--) cout<<" ";
+    cout<<b<<endl; 
+    
+    
+    
+    iF++;
+    if(iF == nnf+1) return 0; // Exiting after printing number of sunnet times
+
+    // Calling FLSM Function(Recursive)
+    
+
+    // IP Handling
+    IPF = nni + '/' + to_string(cidr);
+    IP_Handling(IPF, ip1, ip2, ip3, ip4, cidr);
+    Subnet_Musk(cidr, ones, zeros, interesting_octet_position, sub_musk, subnets, block_size,ni,b,fhi,lhi,nni,sm,sr,uhr,ip1,ip2,ip3,ip4);
+    
+    return 0;
+            
+}
+
+
+
+
+
+
+
 
 
 int main()
@@ -340,8 +381,7 @@ int main()
     // Show Load
     cout<<"\n Target IP Loaded: "<<ip<<endl;
     
-    cin.get();
-    cin.get();
+    
     
 
 
@@ -365,7 +405,7 @@ int main()
         banner();
         cout<<endl;
         cout<<" Changing target IP...\n";
-        cout<<"\n Target IP Loaded: "<<ip<<endl;
+        cout<<"\n IP Loaded: "<<ip<<endl;
         goto in_ch;
         
         
@@ -373,7 +413,8 @@ int main()
     else if(cmd == "1"){
         cout << "\033[2J\033[1;1H";
         banner();
-        cout<<"\n Target IP Loaded: "<<ip<<endl<<endl;
+        cout<<"\n Category Type    : Subnet Details";
+        cout<<"\n Target IP Loaded : "<<ip<<endl<<endl;
         IP_Handling(ip, ip1, ip2, ip3, ip4, cidr);
         Subnet_Musk(cidr, ones, zeros, interesting_octet_position, sub_musk, subnets, block_size,ni,b,fhi,lhi,nni,sm,sr,uhr,ip1,ip2,ip3,ip4);
         Find_Subnet_Details(ni, b, fhi, lhi, nni, sm,sr,uhr, ones, zeros, cidr, block_size, subnets);
@@ -384,18 +425,17 @@ int main()
        
         cout << "\033[2J\033[1;1H";
         banner();
-        cout<<"\n Target IP Loaded: "<<ip<<endl;
+        cout<<"\n Category Type     : FLSM";
+        cout<<"\n Target IP Loaded  : "<<ip<<endl;
 
         Num_of_Subnets:
 
         // Inputing number of subnets
         int nf,cidr_shifter,iF = 1;
-        cout<<" Number of Subnets: ";
+        cout<<" Number of Subnets : ";
         cin>> nf;
         int nnf = nf;
-
         
-
         
 
         // Finding new CIDR
@@ -403,7 +443,7 @@ int main()
         cidr = cidr + cidr_shifter;
         
         
-        cout<<" CIDR of Subnets: "<< cidr<<endl<<endl;
+        cout<<" CIDR of Subnets   : "<< cidr<<endl<<endl;
         IPF = ni + '/' + to_string(cidr);
     
         IP_Handling(IPF, ip1, ip2, ip3, ip4, cidr);
@@ -412,7 +452,7 @@ int main()
         
         
         // Subnets
-        cout<<" Subnet"<<"       "<<"    Network IP"<< "                        "<<"Host Range"<<"                       "<<"Brodcast"<<endl;
+        cout<<" Subnet"<<"       "<<" Network ID"<< "                        "<<"Host Range"<<"                                    "<<"Brodcast IP"<<endl;
         cout<<endl;
 
         FLSM(cidr, ones, zeros, interesting_octet_position, sub_musk, subnets, block_size,ni,b,fhi,lhi,nni,sm,sr,uhr,ip1,ip2,ip3,ip4,IPF,nf,iF,nnf);
@@ -424,10 +464,45 @@ int main()
 
     } // Call FLSM()
     else if(cmd == "3"){
+        int nf,iF = 1;
         cout << "\033[2J\033[1;1H";
         banner();
-        cout<<"\n Target IP Loaded: "<<ip<<endl;
-        cout<<" Under Development!!\n";} // Call VLSM()
+        cout<<"\n Category Type    : VLSM";
+        cout<<"\n Target IP Loaded : "<<ip<<endl;
+        cout<<" Number of Subnets: ";
+        cin>>nf;
+        int nnf = nf;
+        int CIDR = (cidr/8)*8;
+        int Cidr = CIDR;
+        int vlsm[nf]; // For containing the Number of IPs
+        int VLSM_arr[] = {128,64,32,16,8,4,2,1};
+        int VLSM_CIDR[nf];
+        cout<<"\n Please enter in descending order.";
+        cout<<"\n Enter Number of IPs: ";
+        for(int i = 0; i < nf; i++){
+            cin>>vlsm[i];
+            for(int j = 0; j < 8; j++){
+                if(vlsm[i] <= VLSM_arr[j]) VLSM_CIDR[i] = ++CIDR;
+                
+            }
+            CIDR = Cidr;
+        
+        }
+        
+        // Subnets
+        cout<<" Subnet"<<"       "<<"    Network ID"<< "                        "<<"Host Range"<<"                       "<<"Brodcast IP"<<endl;
+        cout<<endl;
+        for(int i = 0; i < nf; i++){
+            IPF = ni + '/' + to_string(VLSM_CIDR[i]);
+            
+            Subnet_Musk(VLSM_CIDR[i], ones, zeros, interesting_octet_position, sub_musk, subnets, block_size,ni,b,fhi,lhi,nni,sm,sr,uhr,ip1,ip2,ip3,ip4);
+            VLSM(VLSM_CIDR[i], ones, zeros, interesting_octet_position, sub_musk, subnets, block_size,ni,b,fhi,lhi,nni,sm,sr,uhr,ip1,ip2,ip3,ip4,IPF,nf,iF,nnf);
+        
+        }
+
+
+
+    }    
     else if(cmd == "4" or cmd == "Exit" or cmd == "exit") return 0;
     else{
         cout << "\033[2J\033[1;1H";
