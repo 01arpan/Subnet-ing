@@ -489,6 +489,7 @@ int main()
             CIDR = Cidr;
         
         }
+        cout<<endl;
         
         // Subnets
         cout<<" Subnet"<<"       "<<"    Network ID"<< "                        "<<"Host Range"<<"                       "<<"Brodcast IP"<<endl;
