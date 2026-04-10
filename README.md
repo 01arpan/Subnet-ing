@@ -40,11 +40,17 @@ This tool is ideal for students, network engineers, and cybersecurity learners w
 ## Banner
 
 +========================================+
+
 | Auther     : Arpan Kanti Das           |
+
 | Tool       : Subnet-ing               |
+
 | Technology : C++                       |
+
 | Github     : 01arpan                  |
+
 | E-mail     : arpankantidas9@gmail.com  |
+
 +=======================================+
 
 ## 📥 Input Format
