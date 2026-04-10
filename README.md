@@ -27,6 +27,16 @@ This tool is ideal for students, network engineers, and cybersecurity learners w
 - ✅ Input validation for IPv4 format
 
 ---
+
+## Installation and Run
+
+git clone https://github.com/01arpan/Subnet-ing/
+cd Subnet-ing
+g++ subnetting.cpp -o exicutable
+./exicutable
+
+
+
 ## Banner
 
 +========================================+
@@ -75,10 +85,7 @@ Number of Hosts   : 254
 
 Just type "Exit" or "exit" or 4(in cmd)
 
-## Note
 
-"Ffaa" is just for fun, just press the "Enter" button.
-FLSM and VLSM are under development, features will be added soon...
 
 
 ## 
