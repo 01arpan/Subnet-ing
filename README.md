@@ -30,10 +30,10 @@ This tool is ideal for students, network engineers, and cybersecurity learners w
 
 ## Installation and Run
 
-git clone https://github.com/01arpan/Subnet-ing/ \n
-cd Subnet-ing
-g++ subnetting.cpp -o exicutable
-./exicutable
+1. git clone https://github.com/01arpan/Subnet-ing/ 
+2. cd Subnet-ing
+3. g++ subnetting.cpp -o exicutable
+4. ./exicutable
 
 
 
@@ -54,6 +54,7 @@ Enter IP address in CIDR notation, like: 192.168.1.10/24
 ## Options
 
 What You Wanna DO?
+
 0. Change Target IP
 1. Find Subnet Details
 2. FLSM
