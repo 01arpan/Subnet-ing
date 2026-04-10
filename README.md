@@ -2,7 +2,7 @@
 Are you stuck at subnetting? Use my tool!!!
 
 
-# 🌐 Subnet Calculator Tool
+#  Subnet Calculator Tool
 
 A powerful and efficient networking tool designed to calculate and analyze subnet-related information, including:
 
@@ -14,7 +14,7 @@ This tool is ideal for students, network engineers, and cybersecurity learners w
 
 ---
 
-## 🚀 Features
+##   Features
 
 - ✅ Calculate Network ID
 - ✅ Find Broadcast Address
@@ -28,7 +28,7 @@ This tool is ideal for students, network engineers, and cybersecurity learners w
 
 ---
 
-## Installation and Run
+##   Installation and Run
 
 1. git clone https://github.com/01arpan/Subnet-ing/ 
 2. cd Subnet-ing
@@ -37,7 +37,7 @@ This tool is ideal for students, network engineers, and cybersecurity learners w
 
 
 
-## Banner
+##   Banner
 
 +========================================+
 
@@ -53,11 +53,11 @@ This tool is ideal for students, network engineers, and cybersecurity learners w
 
 +=======================================+
 
-## 📥 Input Format
+##   Input Format
 
 Enter IP address in CIDR notation, like: 192.168.1.10/24
 
-## Options
+##   Options
 
 What You Wanna DO?
 
@@ -69,7 +69,7 @@ What You Wanna DO?
 
 Choose your option.
 
-## 📤 Output Example
+##   Output Example
 
 <img width="624" height="328" alt="image" src="https://github.com/user-attachments/assets/a32995a9-12ad-4dea-b7da-c05e4bb453bb" />
 
