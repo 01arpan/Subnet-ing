@@ -69,39 +69,18 @@ What You Wanna DO?
 
 Choose your option.
 
-## 📤 Output Example(Subnet details)
+## 📤 Output Example
 
-Target IP Loaded: 192.168.1.10/24
+<img width="624" height="328" alt="image" src="https://github.com/user-attachments/assets/a32995a9-12ad-4dea-b7da-c05e4bb453bb" />
 
-Subnet Details...
+<img width="624" height="334" alt="image" src="https://github.com/user-attachments/assets/3e0557d6-d3be-4062-8704-860545546106" />
 
-Network ID        : 192.168.1.0
+<img width="624" height="332" alt="image" src="https://github.com/user-attachments/assets/bb5476a1-951c-4ec6-906c-4425c753d814" />
 
-Broadcast         : 192.168.1.255
 
-First Host IP     : 192.168.1.1
 
-Last Host IP      : 192.168.1.254
 
-Next Network ID   : 192.168.1.0
-
-Subnet Mask       : 255.255.255.0
-
-Netorks Bits      : 0
-
-Host Bits         : 8
-
-CIDR              : 24
-
-Block Size        : 256
-
-Subnets           : 1
-
-IP Addresses      : 256
-
-Number of Hosts   : 254
-
-## For exit the program
+##
 
 Just type "Exit" or "exit" or 4(in cmd)
 
