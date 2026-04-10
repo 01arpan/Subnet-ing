@@ -41,15 +41,15 @@ This tool is ideal for students, network engineers, and cybersecurity learners w
 
 +========================================+
 
-| Auther     : Arpan Kanti Das           |
+|  Auther     : Arpan Kanti Das                              |
 
-| Tool       : Subnet-ing               |
+|  Tool       : Subnet-ing                                  |
 
-| Technology : C++                       |
+|  Technology : C++                                          |
 
-| Github     : 01arpan                  |
+|  Github     : 01arpan                                     |
 
-| E-mail     : arpankantidas9@gmail.com  |
+|  E-mail     : arpankantidas9@gmail.com                     |
 
 +=======================================+
 
@@ -74,18 +74,31 @@ Choose your option.
 Target IP Loaded: 192.168.1.10/24
 
 Subnet Details...
+
 Network ID        : 192.168.1.0
+
 Broadcast         : 192.168.1.255
+
 First Host IP     : 192.168.1.1
+
 Last Host IP      : 192.168.1.254
+
 Next Network ID   : 192.168.1.0
+
 Subnet Mask       : 255.255.255.0
+
 Netorks Bits      : 0
+
 Host Bits         : 8
+
 CIDR              : 24
+
 Block Size        : 256
+
 Subnets           : 1
+
 IP Addresses      : 256
+
 Number of Hosts   : 254
 
 ## For exit the program
