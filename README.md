@@ -30,7 +30,7 @@ This tool is ideal for students, network engineers, and cybersecurity learners w
 
 ## Installation and Run
 
-git clone https://github.com/01arpan/Subnet-ing/
+git clone https://github.com/01arpan/Subnet-ing/ \n
 cd Subnet-ing
 g++ subnetting.cpp -o exicutable
 ./exicutable
