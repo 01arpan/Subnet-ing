@@ -246,7 +246,7 @@ void Find_Subnet_Details(string ni, string b, string fhi, string lhi,string nni,
 
 void banner(){
     cout<<"                                       +========================================+\n";
-    cout<<"                                       | Auther     : Arpan Kanti Das           |\n";
+    cout<<"                                       | Author     : Arpan Kanti Das           |\n";
     cout<<"                                       | Tool       : Subnet-ing               |\n";
     cout<<"                                       | Technology : C++                       |\n";
     cout<<"                                       | Github     : 01arpan                  |\n";
