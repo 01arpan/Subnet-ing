@@ -245,13 +245,14 @@ void Find_Subnet_Details(string ni, string b, string fhi, string lhi,string nni,
 }
 
 void banner(){
-    cout<<"                                       +========================================+\n";
-    cout<<"                                       | Author     : Arpan Kanti Das           |\n";
-    cout<<"                                       | Tool       : Subnet-ing               |\n";
-    cout<<"                                       | Technology : C++                       |\n";
-    cout<<"                                       | Github     : 01arpan                  |\n";
-    cout<<"                                       | E-mail     : arpankantidas9@gmail.com  |\n";
-    cout<<"                                       +=======================================+\n";
+    cout<<"                                       +===============================================+\n";
+    cout<<"                                       | Tool       : Subnet-ing                       |\n";
+    cout<<"                                       | Supervisor : Prof. Dr. Mohammed Shahin Uddin |\n";
+    cout<<"                                       |              Department of ICT, MBSTU         |\n";
+    cout<<"                                       | Technology : C++                             |\n";
+    cout<<"                                       | GitHub     : github.com/01arpan/Subnet-ing    |\n";
+    cout<<"                                       | E-mail     : it25039@mbstu.ac.bd             |\n";
+    cout<<"                                       +==============================================+\n";
 
 }
 
